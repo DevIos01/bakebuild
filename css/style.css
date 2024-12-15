@@ -1,0 +1,125 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Fredoka One', sans-serif;
+  background: linear-gradient(135deg, #C4E2E7, #A2CAD8);
+  color: #4f2f2f;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cookie-border-left, .cookie-border-right {
+  position: fixed;
+  top: 0;
+  width: 130px;
+  height: 100%;
+  background: url('../images/cookie-stack.png') repeat-y center/contain;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.cookie-border-left {
+  left: 0;
+}
+
+.cookie-border-right {
+  right: 0;
+}
+
+.secondary-header {
+  padding: 20px 0;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 680px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.subtagline {
+  font-size: 1.2em;
+  color: #d2b48c;
+  margin-bottom: 5px;
+}
+
+.hackclub {
+  font-size: 1em;
+  color: #4f2f2f;
+}
+
+.notification-section {
+  margin: 50px 0;
+  padding: 30px;
+  width: 400px;
+  max-width: 90%;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.notify-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.notify-form input[type="email"] {
+  padding: 15px;
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #4f2f2f;
+  border-radius: 10px;
+}
+
+.notify-form .share-button {
+  padding: 15px 30px;
+  background: #ff7043;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.notify-form .share-button:hover {
+  background: #e64a19;
+}
+
+.howto-section, .resources {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.feedback-message {
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #4f2f2f;
+  display: none;
+}
+
+.feedback-message.success {
+  color: green;
+}
+
+.feedback-message.error {
+  color: red;
+}

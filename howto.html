@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BakeBuild - How To</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/howto.css" />
+
+
+</head>
+
+<body>
+    <div class="cookie-border-left"></div>
+    <div class="cookie-border-right"></div>
+
+    <header>
+        <img src="./images/bakebuild-logo.png" alt="BakeBuild Logo" class="logo" />
+        <p style="font-size: 1.2em; font-family: 'More-Sugar'; margin-top: -3.5%; margin-bottom: -1.5%;">CAD. Cut.
+            Cookie.</p>
+    </header>
+
+    <div class="content-container">
+        <div class="table-container">
+            <table class="center" style="border-spacing: 1em; width: 50%;">
+                <tr>
+                    <td><a href="#get-started"><button>HOW TO GET<br>STARTED</button></a></td>
+                    <td><a href="#submit"><button>SUBMIT</button></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#resources"><button>RESOURCES</button></a></td>
+                    <td><a href="#share"><button>SHARE WITH US</button></a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="dotted-line"></div>
+
+        <section id="get-started">
+            <h1>HOW TO GET STARTED!</h1>
+            <ol class="numbered-list">
+                <li>
+                    <h2>Draft your idea</h2>
+                    <p>Decide what shape you want to make your cookie cutter, and find a simple image or template of it
+                        online</p>
+                </li>
+                <li>
+                    <h2>Design it in CAD</h2>
+                    <p>Create a document in your CAD program of choice (Onshape for example), and start designing your
+                        cookie cutter with the help of the resources!</p>
+                </li>
+                <li>
+                    <h2>Submit it!</h2>
+                    <p>Once you're done with your design, double check that it fits the requirements, and submit it on
+                        the website!</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="resources">
+            <h1>RESOURCES</h1>
+            <div class="resources-grid">
+                <div class="left-column">
+                    <h2>Basic requirements</h2>
+                    <h3>Your cookie cutter should be:</h3>
+                    <ul class="requirements-list">
+                        <li>a fun design<br>(don't just make a basic shape)</li>
+                        <li>≤ 100mm x 100mm</li>
+                        <li>Have a wall + border</li>
+                    </ul>
+                    <img src="./images/Mixing-bowl.png" alt="Mixing Bowl" class="bowl-image">
+                    <div class="external-resources">
+                        <h2>External resources</h2>
+                        <p>For a video tutorial, see:</p>
+                        <div class="video-container">
+                            <iframe width="280" height="180" src="https://www.youtube.com/embed/oSEd81h82d8"
+                                title="Create a Cookie Cutter Using the Thin Tool" allowfullscreen></iframe>
+                        </div>
+                        <p>Join #BakeBuild on the <a href="https://hackclub.com/slack">Hack Club Slack</a> for any
+                            questions you have</p>
+                    </div>
+                </div>
+
+                <div class="right-column">
+                    <h2>Directions</h2>
+                    <ol class="directions-list">
+                        <li>Make a document in Onshape and import a simple template of your design</li>
+                        <li>Create a sketch and insert the image, using the dimension tool to fix its size</li>
+                        <li>Trace your outline using the "spline" tool and confirm your sketch</li>
+                        <li>Use the extrude tool on the "thin" setting and select your outline<br>
+                            <span class="measurements">thickness ≈ 1.6mm<br>depth ≈ 12.7mm</span>
+                        </li>
+                        <li>Use the extrude tool on the "thin" setting and select the top of your cutter<br>
+                            <span class="measurements">thickness ≈ 5mm<br>depth ≈ 1-2mm</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="share">
+            <h1>SHARE WITH US</h1>
+            <h2>We'd love to hear from you!<br>Join #BakeBuild in the <a href="https://hackclub.com/slack">Hack Club
+                    Slack</a> and tell us how it went!</h2>
+        </section>
+
+        <section id="submit">
+            <h1>SUBMIT</h1>
+            <div class="submit-container">
+                <h2 style="font-family: 'Playpen Sans'; color: #c6926c; margin-bottom: 2em;">
+                    Ready to submit your cookie cutter design?</h2>
+                <button
+                    onclick="window.location.href='https://airtable.com/embed/apphIjW8QTCISm6tv/pag3YT81ttiVrN0oZ/form'"
+                    class="submit-button">
+                    Submit Your Design
+                </button>
+                <p style="font-family: 'Playpen Sans'; color: #83583c; margin-top: 1em;">
+                    You'll be redirected to our submission form
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
