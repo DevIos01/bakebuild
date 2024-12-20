@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BakeBuild - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-    <div class="cookie-border-left" aria-hidden="true"></div>
-    <div class="cookie-border-right" aria-hidden="true"></div>
+    <div class="cookie-border-left"></div>
+    <a href="https://hackclub.com" target="_blank" class="hackclub-logo">
+        <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Logo" />
+    </a>
+    <div class="cookie-border-right"></div>
 
     <header class="secondary-header">
         <img src="images/bakebuild-logo.png" alt="BakeBuild Logo" class="logo" loading="lazy" />
@@ -17,20 +23,93 @@
         <p class="hackclub">A Hack Club YSWS</p>
     </header>
 
-    <section class="notification-section">
-        <h2>Get Notified When We Launch!</h2>
-        <form id="notifyForm" class="notify-form">
-            <label for="email" class="email-label">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your email here" required />
-            <button type="submit" class="share-button">Share With Us</button>
-        </form>
-        <div id="feedbackMessage" class="feedback-message"></div>
-    </section>
+    <div class="content-container">
+        <div class="table-container">
+            <section id="rsvp" class="notification-section">
+                <h2>RSVP Here for Future Updates!</h2>
+                <form id="notifyForm" class="notify-form">
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+                    <button type="submit" class="share-button">RSVP</button>
+                </form>
+                <p id="feedbackMessage" class="feedback-message"></p>
+            </section>
+            <div class="dotted-line"></div>
 
-    <section class="howto-link-section">
-        <a href="howto.html" class="howto-link-button">Learn How to Get Started</a>
-    </section>
+            <div class="button-row">
+                <button class="cta-button"
+                    onclick="window.location.href='https://airtable.com/apphIjW8QTCISm6tv/pagbs9wcZpDTyQ8cZ/form'">
+                    SUBMIT YOUR FILE
+                </button>
+                <a href="#resources" class="cta-button-link">
+                    <button class="cta-button">RESOURCES</button>
+                </a>
+                <a href="https://twitter.com/intent/tweet?text=Check%20out%20BakeBuild%20and%20create%20your%20own%20cookie%20cutter!%20https://bakebuild.hackclub.com/%20%23bakebuild%20%23hackclub%20@hackclub"
+                    class="cta-button-link">
+                    <button class="cta-button">Share on X</button>
+                </a>
+            </div>
+        </div>
 
+        <div class="dotted-line"></div>
+        <section id="get-started">
+            <h1>HOW TO GET STARTED!</h1>
+            <ol class="numbered-list">
+                <li>
+                    <h2>Draft your idea</h2>
+                    <p>Decide on the cookie cutter shape. Sketch your idea on a piece of paper or use digital tools.</p>
+                </li>
+                <li>
+                    <h2>Design it in CAD</h2>
+                    <p>Use a CAD software like <a href="https://www.onshape.com">Onshape</a>,
+                        <a href="https://www.tinkercad.com">TinkerCAD</a>, or <a
+                            href="https://www.autodesk.com/products/fusion-360">Fusion 360</a>. Design according to the
+                        guidelines provided in <a href="#resources">Resources</a>.
+                    </p>
+                </li>
+                <li>
+                    <h2>Submit it!</h2>
+                    <p>Ensure your design meets all <a href="#resources">requirements</a>. Once ready, click the
+                        "SUBMIT YOUR FILE" button above to send us your design!</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="resources">
+            <h1>RESOURCES</h1>
+            <div class="resources-grid">
+                <div class="left-column">
+                    <h2>Basic requirements</h2>
+                    <ul class="requirements-list">
+                        <li>a fun design<br>(don't just make a basic shape)</li>
+                        <li>≤ 100mm x 100mm</li>
+                        <li>Have a wall + border</li>
+                    </ul>
+                    <img src="./images/Mixing-bowl.png" alt="Mixing Bowl" class="bowl-image">
+                    <div class="external-resources">
+                        <h2>External resources</h2>
+                        <p>For a video tutorial, see:</p>
+                        <div class="video-container">
+                            <iframe width="280" height="180" src="https://www.youtube.com/embed/oSEd81h82d8"
+                                title="Create a Cookie Cutter Using the Thin Tool" allowfullscreen></iframe>
+                        </div>
+                        <p>Join <a href="https://hackclub.slack.com/archives/C0844MV2JM9">#BakeBuild</a> on the <a
+                                href="https://hackclub.com/slack">Hack Club Slack</a> for any
+                            questions you have</p>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <h2>Directions</h2>
+                    <ol class="directions-list">
+                        <li>Make a document in Onshape and import a simple template of your design</li>
+                        <li>Create a sketch and insert the image, using the dimension tool to fix its size</li>
+                        <li>Trace your outline using the "spline" tool and confirm your sketch</li>
+                        <li>Use the extrude tool on the "thin" setting and select your outline</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>

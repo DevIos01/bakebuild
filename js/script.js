@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-
             const response = await fetch("/api/submit-email", {
                 method: "POST",
                 headers: {
