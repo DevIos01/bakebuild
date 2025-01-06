@@ -102,9 +102,9 @@ button:hover {
 }
 
 .dotted-line {
-    border-top: 2px dotted #000;
-    width: 100%;
-    margin: 20px 0;
+    border-top: 2px dotted #cfb886;
+    width: calc(100% - 40px);
+    margin: 20px auto;
 }
 
 h1 {
@@ -156,9 +156,9 @@ section {
 
 .numbered-list li {
     counter-increment: list-counter;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     position: relative;
-    padding-left: 3.5em;
+    padding-left: 4em;
     text-align: left;
 }
 
@@ -254,7 +254,7 @@ section {
 }
 
 #resources {
-    background: linear-gradient(135deg, #f9f4ee, #ffffff);
+    background: linear-gradient(135deg, #ffffff, #ffffff);
     padding: 3em;
 }
 
@@ -264,7 +264,7 @@ section {
 }
 
 .notification-section {
-    background: linear-gradient(135deg, #f9f4ee, #ffffff);
+    background: linear-gradient(135deg, #ffffff, #ffffff);
     border: 1px solid #cfb886;
     border-radius: 30px;
     padding: 20px;
@@ -381,3 +381,15 @@ section {
 .social-button:hover {
     transform: scale(1.05);
 }
+
+footer {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 0.9em;
+    color: #4f2f2f;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+    border-top: 2px solid #cfb886;
+    margin-top: 30px;
+}
+
