@@ -40,6 +40,10 @@
       "dest": "/api/submit-email.js"
     },
     {
+      "src": "/faq.html",
+      "dest": "/faq.html"
+    },
+    {
       "src": "/faq",
       "dest": "/faq.html"
     },
