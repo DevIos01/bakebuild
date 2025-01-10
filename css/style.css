@@ -21,8 +21,10 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    height: 100%;
     font-family: 'Fredoka One', sans-serif;
     background: linear-gradient(135deg, #C4E2E7, #A2CAD8);
+    background-size: cover;
     color: #4f2f2f;
     overflow-x: hidden;
 }
@@ -332,15 +334,18 @@ section {
 }
 
 .hackclub-logo {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 200px;
     z-index: 10;
+    width: 80px;
+    height: auto;
 }
 
 .hackclub-logo img {
-    width: 280px;
+    width: 300%;
     height: auto;
+    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -503,40 +508,126 @@ footer {
         font-size: 0.8em;
     }
 
+    .hackclub-logo {
+        top: 0px;
+        left: 0px;
+        width: 36px;
+    }
+
     .content-container {
         width: 100%;
         padding: 0 15px;
     }
 
-    .responsive-logo {
-        max-width: 150px;
-        width: auto;
-        height: auto;
-        margin: 0 auto 15px auto;
+    .resources-grid {
+        display: block;
+        padding: 0;
     }
 
-}
+    .left-column,
+    .right-column {
+        margin-bottom: 20px;
+    }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-    .logo {
-        max-width: 300px;
+    .numbered-list {
+        counter-reset: list-counter;
+        list-style: none;
+        padding-left: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .numbered-list li {
+        counter-increment: list-counter;
+        margin-bottom: 1.5em;
+        position: relative;
+        padding-left: 3em;
+        text-align: left;
+    }
+
+    .numbered-list h2 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .numbered-list p {
+        font-size: 1em;
+        margin-top: 0.5em;
+        line-height: 1.5;
+    }
+
+    .numbered-list li::before {
+        content: counter(list-counter);
+        background-color: #cfb886;
+        border-radius: 50%;
+        display: inline-block;
+        height: 2em;
+        width: 2em;
+        line-height: 2em;
+        text-align: center;
+        font-size: 1.5em;
+        position: absolute;
+        left: 0px;
+        transform: translate(-40%);
+        top: 0;
+        color: #ffffff;
+    }
+
+    .directions-list li {
+        padding-left: 2.5em;
+    }
+
+    .directions-list li::before {
+        left: 0;
+    }
+
+    button,
+    .cta-button {
         width: 100%;
-        height: auto;
-        margin: 0 auto 15px auto;
+        font-size: 1.2em;
+        padding: 10px;
+        margin-bottom: 10px;
     }
 
-    .subtagline {
+    .notify-form input[type="email"] {
+        width: 90%;
+    }
+
+    .notify-form .share-button {
+        width: 90%;
+    }
+
+    section {
+        padding: 1.5em 1em;
+    }
+
+    h1,
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
         font-size: 1em;
     }
 
-    .hackclub {
-        font-size: 0.9em;
+    .faq-container {
+        width: 90%;
+        padding: 20px;
     }
+}
 
-    .responsive-logo {
-        max-width: 250px;
-        width: auto;
-        height: auto;
-        margin: 0 auto 15px auto;
+@media (max-width: 1339px) and (min-width: 770px) {
+    .hackclub-logo {
+        top: 0px;
+        left: 180px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 1230px) {
+
+    body.faq-page .cookie-border-left,
+    body.faq-page .cookie-border-right {
+        display: none;
     }
 }
