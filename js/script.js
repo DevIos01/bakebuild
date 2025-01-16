@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("notifyForm");
     const emailInput = document.getElementById("email");
     const feedbackMessage = document.getElementById("feedbackMessage");
+    const submitButton = form.querySelector("button[type='submit']");
 
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -12,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
             showFeedback("Please enter a valid email.", "error");
             return;
         }
+
+        disableButtonWithSpinner(submitButton, true);
 
         try {
             const response = await fetch("/api/submit-email", {
@@ -37,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error("Error:", error);
             showFeedback("Something went wrong. Please try again later.", "error");
+        } finally {
+            disableButtonWithSpinner(submitButton, false);
         }
     });
 
@@ -48,5 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             feedbackMessage.style.display = "none";
         }, 5000);
+    }
+
+    function disableButtonWithSpinner(button, disable) {
+        if (disable) {
+            button.disabled = true;
+            button.innerHTML = `<span class="spinner"></span> RSVP`;
+        } else {
+            button.disabled = false;
+            button.textContent = "RSVP";
+        }
     }
 });
